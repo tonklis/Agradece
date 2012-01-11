@@ -1,0 +1,92 @@
+<% title "Entry" %>
+
+<p>
+  <strong>Date:</strong>
+  <%= @entry.date %>
+</p>
+<p>
+  <strong>Usuario:</strong>
+  <%= @entry.usuario_id %>
+</p>
+<p>
+  <strong>Goal:</strong>
+  <%= @entry.goal %>
+</p>
+<p>
+  <strong>Give:</strong>
+  <%= @entry.give %>
+</p>
+<p>
+  <strong>Grateful One:</strong>
+  <%= @entry.grateful_one %>
+</p>
+<p>
+  <strong>Grateful Two:</strong>
+  <%= @entry.grateful_two %>
+</p>
+<p>
+  <strong>Grateful Three:</strong>
+  <%= @entry.grateful_three %>
+</p>
+<p>
+  <strong>Grateful Four:</strong>
+  <%= @entry.grateful_four %>
+</p>
+<p>
+  <strong>Grateful Five:</strong>
+  <%= @entry.grateful_five %>
+</p>
+<p>
+  <strong>Grateful Six:</strong>
+  <%= @entry.grateful_six %>
+</p>
+<p>
+  <strong>Grateful Seven:</strong>
+  <%= @entry.grateful_seven %>
+</p>
+<p>
+  <strong>Grateful Eight:</strong>
+  <%= @entry.grateful_eight %>
+</p>
+<p>
+  <strong>Grateful Nine:</strong>
+  <%= @entry.grateful_nine %>
+</p>
+<p>
+  <strong>Grateful Ten:</strong>
+  <%= @entry.grateful_ten %>
+</p>
+<p>
+  <strong>Thanks:</strong>
+  <%= @entry.thanks %>
+</p>
+<p>
+  <strong>Happy:</strong>
+  <%= @entry.happy %>
+</p>
+<p>
+  <strong>Evaluation:</strong>
+  <%= @entry.evaluation %>
+</p>
+<p>
+  <strong>Improvement:</strong>
+  <%= @entry.improvement %>
+</p>
+<p>
+  <strong>Happier:</strong>
+  <%= @entry.happier %>
+</p>
+<p>
+  <strong>Still Pending:</strong>
+  <%= @entry.still_pending %>
+</p>
+<p>
+  <strong>Greeting:</strong>
+  <%= @entry.greeting %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_entry_path(@entry) %> |
+  <%= link_to "Destroy", @entry, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", entries_path %>
+</p>

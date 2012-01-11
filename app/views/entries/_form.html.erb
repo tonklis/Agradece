@@ -1,0 +1,88 @@
+<%= form_for @entry do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :date %><br />
+    <%= f.date_select :date %>
+  </p>
+  <p>
+    <%= f.label :usuario_id %><br />
+    <%= f.text_field :usuario_id %>
+  </p>
+  <p>
+    <%= f.label :goal %><br />
+    <%= f.text_field :goal %>
+  </p>
+  <p>
+    <%= f.label :give %><br />
+    <%= f.text_area :give %>
+  </p>
+  <p>
+    <%= f.label :grateful_one %><br />
+    <%= f.text_field :grateful_one %>
+  </p>
+  <p>
+    <%= f.label :grateful_two %><br />
+    <%= f.text_field :grateful_two %>
+  </p>
+  <p>
+    <%= f.label :grateful_three %><br />
+    <%= f.text_field :grateful_three %>
+  </p>
+  <p>
+    <%= f.label :grateful_four %><br />
+    <%= f.text_field :grateful_four %>
+  </p>
+  <p>
+    <%= f.label :grateful_five %><br />
+    <%= f.text_field :grateful_five %>
+  </p>
+  <p>
+    <%= f.label :grateful_six %><br />
+    <%= f.text_field :grateful_six %>
+  </p>
+  <p>
+    <%= f.label :grateful_seven %><br />
+    <%= f.text_field :grateful_seven %>
+  </p>
+  <p>
+    <%= f.label :grateful_eight %><br />
+    <%= f.text_field :grateful_eight %>
+  </p>
+  <p>
+    <%= f.label :grateful_nine %><br />
+    <%= f.text_field :grateful_nine %>
+  </p>
+  <p>
+    <%= f.label :grateful_ten %><br />
+    <%= f.text_field :grateful_ten %>
+  </p>
+  <p>
+    <%= f.label :thanks %><br />
+    <%= f.text_area :thanks %>
+  </p>
+  <p>
+    <%= f.label :happy %><br />
+    <%= f.text_field :happy %>
+  </p>
+  <p>
+    <%= f.label :evaluation %><br />
+    <%= f.text_field :evaluation %>
+  </p>
+  <p>
+    <%= f.label :improvement %><br />
+    <%= f.text_field :improvement %>
+  </p>
+  <p>
+    <%= f.label :happier %><br />
+    <%= f.text_field :happier %>
+  </p>
+  <p>
+    <%= f.label :still_pending %><br />
+    <%= f.text_field :still_pending %>
+  </p>
+  <p>
+    <%= f.label :greeting %><br />
+    <%= f.text_field :greeting %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

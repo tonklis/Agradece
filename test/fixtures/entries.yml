@@ -1,0 +1,45 @@
+one:
+  date: 2012-01-11
+  usuario_id: 1
+  goal: MyString
+  give: MyText
+  grateful_one: MyString
+  grateful_two: MyString
+  grateful_three: MyString
+  grateful_four: MyString
+  grateful_five: MyString
+  grateful_six: MyString
+  grateful_seven: MyString
+  grateful_eight: MyString
+  grateful_nine: MyString
+  grateful_ten: MyString
+  thanks: MyText
+  happy: MyString
+  evaluation: MyString
+  improvement: MyString
+  happier: MyString
+  still_pending: MyString
+  greeting: MyString
+
+two:
+  date: 2012-01-11
+  usuario_id: 1
+  goal: MyString
+  give: MyText
+  grateful_one: MyString
+  grateful_two: MyString
+  grateful_three: MyString
+  grateful_four: MyString
+  grateful_five: MyString
+  grateful_six: MyString
+  grateful_seven: MyString
+  grateful_eight: MyString
+  grateful_nine: MyString
+  grateful_ten: MyString
+  thanks: MyText
+  happy: MyString
+  evaluation: MyString
+  improvement: MyString
+  happier: MyString
+  still_pending: MyString
+  greeting: MyString
