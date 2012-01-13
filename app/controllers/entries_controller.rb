@@ -1,4 +1,6 @@
 class EntriesController < ApplicationController
+  before_filter :authenticate_usuario!
+
   def index
     @entries = Entry.all
   end
@@ -13,6 +15,7 @@ class EntriesController < ApplicationController
 
   def create
     @entry = Entry.new(params[:entry])
+    @entry.usuario = current_usuario
     if @entry.save
       redirect_to @entry, :notice => "Successfully created entry."
     else

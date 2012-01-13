@@ -3,50 +3,12 @@
 <table>
   <tr>
     <th>Date</th>
-    <th>Usuario</th>
     <th>Goal</th>
-    <th>Give</th>
-    <th>Grateful One</th>
-    <th>Grateful Two</th>
-    <th>Grateful Three</th>
-    <th>Grateful Four</th>
-    <th>Grateful Five</th>
-    <th>Grateful Six</th>
-    <th>Grateful Seven</th>
-    <th>Grateful Eight</th>
-    <th>Grateful Nine</th>
-    <th>Grateful Ten</th>
-    <th>Thanks</th>
-    <th>Happy</th>
-    <th>Evaluation</th>
-    <th>Improvement</th>
-    <th>Happier</th>
-    <th>Still Pending</th>
-    <th>Greeting</th>
   </tr>
   <% for entry in @entries %>
     <tr>
       <td><%= entry.date %></td>
-      <td><%= entry.usuario_id %></td>
       <td><%= entry.goal %></td>
-      <td><%= entry.give %></td>
-      <td><%= entry.grateful_one %></td>
-      <td><%= entry.grateful_two %></td>
-      <td><%= entry.grateful_three %></td>
-      <td><%= entry.grateful_four %></td>
-      <td><%= entry.grateful_five %></td>
-      <td><%= entry.grateful_six %></td>
-      <td><%= entry.grateful_seven %></td>
-      <td><%= entry.grateful_eight %></td>
-      <td><%= entry.grateful_nine %></td>
-      <td><%= entry.grateful_ten %></td>
-      <td><%= entry.thanks %></td>
-      <td><%= entry.happy %></td>
-      <td><%= entry.evaluation %></td>
-      <td><%= entry.improvement %></td>
-      <td><%= entry.happier %></td>
-      <td><%= entry.still_pending %></td>
-      <td><%= entry.greeting %></td>
       <td><%= link_to "Show", entry %></td>
       <td><%= link_to "Edit", edit_entry_path(entry) %></td>
       <td><%= link_to "Destroy", entry, :confirm => 'Are you sure?', :method => :delete %></td>
