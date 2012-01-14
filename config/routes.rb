@@ -1,10 +1,9 @@
 Agradece::Application.routes.draw do
   devise_for :usuarios
-
-  resources :entries
   
   resources :usuarios
 
+  resources :entries
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
