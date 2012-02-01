@@ -1,5 +1,9 @@
 class EntriesController < ApplicationController
+<<<<<<< HEAD
 	before_filter :authenticate_usuario!
+=======
+  before_filter :authenticate_usuario!
+>>>>>>> d54d4d8ee3b71a74e41c3e520973a1b9fe1a21d1
 
   def index
     @entries = Usuario.find_by_twitter_id(session["devise.uid"]).entries
@@ -16,7 +20,11 @@ class EntriesController < ApplicationController
 
   def create
     @entry = Entry.new(params[:entry])
+<<<<<<< HEAD
 		@entry.usuario_id = Usuario.find_by_twitter_id(session["devise.uid"]).id
+=======
+    @entry.usuario = current_usuario
+>>>>>>> d54d4d8ee3b71a74e41c3e520973a1b9fe1a21d1
     if @entry.save
       redirect_to @entry, :notice => "Successfully created entry."
     else

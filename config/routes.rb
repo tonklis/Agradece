@@ -6,7 +6,6 @@ Agradece::Application.routes.draw do
   resources :usuarios
 
 	match '/' => "display#index"
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
