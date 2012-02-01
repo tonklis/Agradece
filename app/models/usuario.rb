@@ -7,7 +7,6 @@ class Usuario < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me
 
-<<<<<<< HEAD
 	def self.find_for_twitter_oauth(auth_hash)
 		usuario = Usuario.find_by_twitter_id auth_hash["uid"]
 		if not usuario
@@ -20,7 +19,4 @@ class Usuario < ActiveRecord::Base
 		return usuario		
 	end
 
-=======
-  has_many :entries
->>>>>>> d54d4d8ee3b71a74e41c3e520973a1b9fe1a21d1
 end
