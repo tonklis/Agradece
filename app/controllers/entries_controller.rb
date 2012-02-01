@@ -1,18 +1,22 @@
 class EntriesController < ApplicationController
+	before_filter :authenticate_usuario!
+
   def index
-    @entries = Entry.all
+    @entries = Usuario.find_by_twitter_id(session["devise.uid"]).entries
   end
 
   def show
-    @entry = Entry.find(params[:id])
+		valida_entry(params[:id], session["devise.uid"])
   end
 
   def new
     @entry = Entry.new
+		@entry.usuario_id = Usuario.find_by_twitter_id(session["devise.uid"]).id
   end
 
   def create
     @entry = Entry.new(params[:entry])
+		@entry.usuario_id = Usuario.find_by_twitter_id(session["devise.uid"]).id
     if @entry.save
       redirect_to @entry, :notice => "Successfully created entry."
     else
@@ -21,11 +25,11 @@ class EntriesController < ApplicationController
   end
 
   def edit
-    @entry = Entry.find(params[:id])
+		valida_entry(params[:id], session["devise.uid"])
   end
 
   def update
-    @entry = Entry.find(params[:id])
+		valida_entry(params[:id], session["devise.uid"])
     if @entry.update_attributes(params[:entry])
       redirect_to @entry, :notice  => "Successfully updated entry."
     else
@@ -34,8 +38,17 @@ class EntriesController < ApplicationController
   end
 
   def destroy
-    @entry = Entry.find(params[:id])
+		valida_entry(params[:id], session["devise.uid"])
     @entry.destroy
     redirect_to entries_url, :notice => "Successfully destroyed entry."
   end
+
+	def valida_entry entry_id, usuario_id
+		entry = Entry.find(entry_id)
+		if entry.usuario_id == Usuario.find_by_twitter_id(usuario_id).id
+			@entry = entry
+		else
+			redirect_to entries_url, :notice => "The entry is from another user."
+		end
+	end
 end

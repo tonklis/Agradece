@@ -9,11 +9,13 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'jquery-rails'
 gem 'devise'
 gem 'nifty-generators'
+gem 'omniauth-twitter'
 
 # Use unicorn as the web server
 # gem 'unicorn'
 
 gem 'json'
+gem 'multi_json'
 
 # Deploy with Capistrano
 # gem 'capistrano'
