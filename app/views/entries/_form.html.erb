@@ -1,84 +1,89 @@
 <%= form_for @entry do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :date %><br />
     <%= f.date_select :date %>
   </p>
+<div>
+	<h2> Day </h2>
   <p>
-    <%= f.label :goal %><br />
-    <%= f.text_field :goal %>
+    <%= f.label :goal, "What is your goal for today?" %><br />
+    <%= f.text_area :goal, :maxlength => 130, :class => :inputtext %>
   </p>
   <p>
-    <%= f.label :give %><br />
+    <%= f.label :give, "What are you willing to give to others around you?" %><br />
     <%= f.text_area :give %>
   </p>
+	<p> 10 things that you are grateful for: </p>
   <p>
-    <%= f.label :grateful_one %><br />
-    <%= f.text_field :grateful_one %>
+    <%= f.label :grateful_one, "1." %>
+    <%= f.text_field :grateful_one, :maxlength => 130 %>
   </p>
   <p>
-    <%= f.label :grateful_two %><br />
-    <%= f.text_field :grateful_two %>
+    <%= f.label :grateful_two, "2." %>
+    <%= f.text_field :grateful_two, :maxlength => 130 %>
   </p>
   <p>
-    <%= f.label :grateful_three %><br />
-    <%= f.text_field :grateful_three %>
+    <%= f.label :grateful_three, "3." %>
+    <%= f.text_field :grateful_three, :maxlength => 130 %>
   </p>
   <p>
-    <%= f.label :grateful_four %><br />
-    <%= f.text_field :grateful_four %>
+    <%= f.label :grateful_four, "4." %>
+    <%= f.text_field :grateful_four, :maxlength => 130 %>
   </p>
   <p>
-    <%= f.label :grateful_five %><br />
-    <%= f.text_field :grateful_five %>
+    <%= f.label :grateful_five, "5." %>
+    <%= f.text_field :grateful_five, :maxlength => 130 %>
   </p>
   <p>
-    <%= f.label :grateful_six %><br />
-    <%= f.text_field :grateful_six %>
+    <%= f.label :grateful_six, "6." %>
+    <%= f.text_field :grateful_six, :maxlength => 130 %>
   </p>
   <p>
-    <%= f.label :grateful_seven %><br />
-    <%= f.text_field :grateful_seven %>
+    <%= f.label :grateful_seven, "7." %>
+    <%= f.text_field :grateful_seven, :maxlength => 130 %>
   </p>
   <p>
-    <%= f.label :grateful_eight %><br />
-    <%= f.text_field :grateful_eight %>
+    <%= f.label :grateful_eight, "8." %>
+    <%= f.text_field :grateful_eight, :maxlength => 130 %>
   </p>
   <p>
-    <%= f.label :grateful_nine %><br />
-    <%= f.text_field :grateful_nine %>
+    <%= f.label :grateful_nine, "9." %>
+    <%= f.text_field :grateful_nine, :maxlength => 130 %>
   </p>
   <p>
-    <%= f.label :grateful_ten %><br />
-    <%= f.text_field :grateful_ten %>
+    <%= f.label :grateful_ten, "10." %>
+    <%= f.text_field :grateful_ten, :maxlength => 130, :class => :tenthinput %>
   </p>
   <p>
-    <%= f.label :thanks %><br />
-    <%= f.text_area :thanks %>
+    <%= f.label :thanks, "Who do you thank for something you have today? Why?" %><br />
+    <%= f.text_area :thanks, :class => :inputtext %>
   </p>
   <p>
-    <%= f.label :happy %><br />
-    <%= f.text_field :happy %>
+    <%= f.label :happy, "Why are you happy?" %><br />
+    <%= f.text_field :happy, :class => :inputtext %>
+  </p>
+</div>
+<div style="float: right; margin-top: -790px;">
+	<h2>Night</h2>
+  <p>
+    <%= f.label :evaluation, "How well did I do it trying to reach my goal?" %><br />
+    <%= f.text_field :evaluation, :class => :inputtext %>
   </p>
   <p>
-    <%= f.label :evaluation %><br />
-    <%= f.text_field :evaluation %>
+    <%= f.label :improvement, "What did I learn that added value to my day?" %><br />
+    <%= f.text_field :improvement, :class => :inputtext %>
   </p>
   <p>
-    <%= f.label :improvement %><br />
-    <%= f.text_field :improvement %>
+    <%= f.label :happier, "If I could be happier, why would it be?" %><br />
+    <%= f.text_field :happier, :class => :inputtext %>
   </p>
   <p>
-    <%= f.label :happier %><br />
-    <%= f.text_field :happier %>
+    <%= f.label :still_pending, "Which pending activities do I have?" %><br />
+    <%= f.text_field :still_pending, :class => :inputtext  %>
   </p>
   <p>
-    <%= f.label :still_pending %><br />
-    <%= f.text_field :still_pending %>
+    <%= f.label :greeting, "Who should I greet? (birthdays, anniversaries, special events)" %><br />
+    <%= f.text_field :greeting, :class => :inputtext  %>
   </p>
-  <p>
-    <%= f.label :greeting %><br />
-    <%= f.text_field :greeting %>
-  </p>
-  <p><%= f.submit %></p>
+  <%= f.submit :class => :inputbutton %>
 <% end %>

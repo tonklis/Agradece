@@ -4,85 +4,93 @@
   <strong>Date:</strong>
   <%= @entry.date %>
 </p>
-<p>
-  <strong>Goal:</strong>
-  <%= @entry.goal %>
-</p>
-<p>
-  <strong>Give:</strong>
-  <%= @entry.give %>
-</p>
-<p>
-  <strong>Grateful One:</strong>
-  <%= @entry.grateful_one %>
-</p>
-<p>
-  <strong>Grateful Two:</strong>
-  <%= @entry.grateful_two %>
-</p>
-<p>
-  <strong>Grateful Three:</strong>
-  <%= @entry.grateful_three %>
-</p>
-<p>
-  <strong>Grateful Four:</strong>
-  <%= @entry.grateful_four %>
-</p>
-<p>
-  <strong>Grateful Five:</strong>
-  <%= @entry.grateful_five %>
-</p>
-<p>
-  <strong>Grateful Six:</strong>
-  <%= @entry.grateful_six %>
-</p>
-<p>
-  <strong>Grateful Seven:</strong>
-  <%= @entry.grateful_seven %>
-</p>
-<p>
-  <strong>Grateful Eight:</strong>
-  <%= @entry.grateful_eight %>
-</p>
-<p>
-  <strong>Grateful Nine:</strong>
-  <%= @entry.grateful_nine %>
-</p>
-<p>
-  <strong>Grateful Ten:</strong>
-  <%= @entry.grateful_ten %>
-</p>
-<p>
-  <strong>Thanks:</strong>
-  <%= @entry.thanks %>
-</p>
-<p>
-  <strong>Happy:</strong>
-  <%= @entry.happy %>
-</p>
-<p>
-  <strong>Evaluation:</strong>
-  <%= @entry.evaluation %>
-</p>
-<p>
-  <strong>Improvement:</strong>
-  <%= @entry.improvement %>
-</p>
-<p>
-  <strong>Happier:</strong>
-  <%= @entry.happier %>
-</p>
-<p>
-  <strong>Still Pending:</strong>
-  <%= @entry.still_pending %>
-</p>
-<p>
-  <strong>Greeting:</strong>
-  <%= @entry.greeting %>
-</p>
-
+<div>
+	<div>
+	<h2> Day </h2>
+	<p>
+		<%= label_tag :goal, "What is your goal for today?" %><br />
+  	<%= text_area_tag :goal, @entry.goal, :disabled => true, :maxlength => 130, :class => :inputtext, :style => "resize: none;" %>
+	</p>
+	<p>
+    <%= label_tag :give, "What are you willing to give to others around you?" %><br />
+    <%= text_area_tag :give, @entry.give, :disabled => true, :style => "resize: none;" %>
+  </p>
+	<p> 10 things that you are grateful for: </p>
+  <p>
+    <%= label_tag :grateful_one, "1." %>
+    <%= text_field_tag :grateful_one, @entry.grateful_one, :disabled => true, :maxlength => 130 %>
+  </p>
+  <p>
+    <%= label_tag :grateful_two, "2." %>
+    <%= text_field_tag :grateful_two, @entry.grateful_two, :disabled => true, :maxlength => 130 %>
+  </p>
+  <p>
+    <%= label_tag :grateful_three, "3." %>
+    <%= text_field_tag :grateful_three, @entry.grateful_three, :disabled => true, :maxlength => 130 %>
+  </p>
+  <p>
+    <%= label_tag :grateful_four, "4." %>
+    <%= text_field_tag :grateful_four, @entry.grateful_four, :disabled => true, :maxlength => 130 %>
+  </p>
+  <p>
+    <%= label_tag :grateful_one, "5." %>
+    <%= text_field_tag :grateful_five, @entry.grateful_five, :disabled => true, :maxlength => 130 %>
+  </p>
+  <p>
+    <%= label_tag :grateful_six, "6." %>
+    <%= text_field_tag :grateful_six, @entry.grateful_six, :disabled => true, :maxlength => 130 %>
+  </p>
+  <p>
+    <%= label_tag :grateful_seven, "7." %>
+    <%= text_field_tag :grateful_seven, @entry.grateful_seven, :disabled => true, :maxlength => 130 %>
+  </p>
+  <p>
+    <%= label_tag :grateful_eight, "8." %>
+    <%= text_field_tag :grateful_eight, @entry.grateful_eight, :disabled => true, :maxlength => 130 %>
+  </p>
+  <p>
+    <%= label_tag :grateful_nine, "9." %>
+    <%= text_field_tag :grateful_one, @entry.grateful_nine, :disabled => true, :maxlength => 130 %>
+  </p>
+  <p>
+    <%= label_tag :grateful_ten, "10." %>
+    <%= text_field_tag :grateful_ten, @entry.grateful_ten, :disabled => true, :maxlength => 130, :class => :tenthinput %>
+  </p>
+	<p>
+    <%= label_tag :thanks, "Who do you thank for something you have today? Why?" %><br />
+    <%= text_area_tag :thanks, @entry.thanks, :disabled => true, :class => :inputtext, :style => "resize: none;" %>
+  </p>
+  <p>
+    <%= label_tag :happy, "Why are you happy?" %><br />
+    <%= text_field_tag :happy, @entry.happy, :disabled => true, :class => :inputtext %>
+  </p>
+	</div>
+	<div style="float: right; margin-top: -790px;">
+<h2> Night </h2>
+	<p>
+    <%= label_tag :evaluation, "How well did I do it trying to reach my goal?" %><br />
+    <%= text_field_tag :evaluation, @entry.evaluation, :disabled => true, :class => :inputtext %>
+  </p>
+  <p>
+    <%= label_tag :improvement, "What did I learn that added value to my day?" %><br />
+    <%= text_field_tag :improvement, @entry.improvement, :disabled => true, :class => :inputtext %>
+  </p>
+  <p>
+    <%= label_tag :happier, "If I could be happier, why would it be?" %><br />
+    <%= text_field_tag :happier, @entry.happier, :disabled => true, :class => :inputtext %>
+  </p>
+  <p>
+    <%= label_tag :still_pending, "Which pending activities do I have?" %><br />
+    <%= text_field_tag :still_pending, @entry.still_pending, :disabled => true, :class => :inputtext  %>
+  </p>
+  <p>
+    <%= label_tag :greeting, "Who should I greet? (birthdays, anniversaries, special events)" %><br />
+    <%= text_field_tag :greeting, @entry.greeting, :disabled => true, :class => :inputtext  %>
+  </p>
 <p>
   <%= link_to "Edit", edit_entry_path(@entry) %> |
   <%= link_to "Destroy", @entry, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", entries_path %>
+  <%= link_to "Back to List", entries_path %>
 </p>
+	<div>
+</div>

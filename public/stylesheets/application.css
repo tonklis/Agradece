@@ -12,6 +12,33 @@ a {
   color: #0000FF;
 }
 
+input {
+	width: 420px;
+}
+
+.inputbutton {
+	width: 100px;
+}
+
+.inputtext {
+	width: 440px;
+	height: 30px;
+}
+
+.tenthinput {
+	width: 410px;
+}
+
+textarea {
+	width: 440px;
+	height: 100px;
+}
+
+.muestra {
+	width: 440px;
+	height: 10px;
+}
+
 .clear {
   clear: both;
   height: 0;
