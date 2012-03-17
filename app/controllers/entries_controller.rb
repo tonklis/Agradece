@@ -2,7 +2,7 @@ class EntriesController < ApplicationController
 	before_filter :authenticate_usuario!
 
   def index
-    @entries = Usuario.find_by_twitter_id(session["devise.uid"]).entries
+    @entries = Usuario.find_by_twitter_id(session["devise.uid"]).entries.sort{|a,b| b[:created_at] <=> a[:created_at]}
   end
 
   def show
